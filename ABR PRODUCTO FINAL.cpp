@@ -13,7 +13,7 @@ struct Nodo {
         : nombre(nom), nacimiento(nac), fallecimiento(fall), izquierda(NULL), derecha(NULL) {}
 };
 
-// Inserción con verificación de duplicados
+// InserciÃ³n con verificaciÃ³n de duplicados
 Nodo* insertar(Nodo* raiz, string nombre, int nac, int fall) {
     if (!raiz) return new Nodo(nombre, nac, fall);
     if (nombre < raiz->nombre)
@@ -118,27 +118,27 @@ int main() {
     int nac, fall;
 
     do {
-        cout << "\n======= MENÚ ÁRBOL GENEALÓGICO =======\n";
+        cout << "\n======= MENÃš ÃRBOL GENEALÃ“GICO =======\n";
         cout << "1. Insertar miembro\n";
         cout << "2. Eliminar miembro\n";
         cout << "3. Modificar miembro\n";
         cout << "4. Buscar miembro\n";
-        cout << "5. Mostrar jerarquía\n";
+        cout << "5. Mostrar jerarquÃ­a\n";
         cout << "6. Mostrar Inorden\n";
         cout << "7. Mostrar Preorden\n";
         cout << "8. Mostrar Postorden\n";
         cout << "9. Mostrar ancestros\n";
         cout << "10. Salir\n";
-        cout << "Seleccione una opción: ";
+        cout << "Seleccione una opciÃ³n: ";
         cin >> opcion;
 
         switch (opcion) {
             case 1:
                 cout << "\nNombre: ";
                 cin >> nombre;
-                cout << "Año de nacimiento: ";
+                cout << "AÃ±o de nacimiento: ";
                 cin >> nac;
-                cout << "Año de fallecimiento: ";
+                cout << "AÃ±o de fallecimiento: ";
                 cin >> fall;
                 raiz = insertar(raiz, nombre, nac, fall);
                 break;
@@ -153,8 +153,8 @@ int main() {
                 {
                     Nodo* nodoMod = buscar(raiz, nombre);
                     if (nodoMod) {
-                        cout << "¿Qué desea modificar?\n";
-                        cout << "1. Nombre\n2. Año de nacimiento\n3. Año de fallecimiento\nOpción: ";
+                        cout << "Â¿QuÃ© desea modificar?\n";
+                        cout << "1. Nombre\n2. AÃ±o de nacimiento\n3. AÃ±o de fallecimiento\nOpciÃ³n: ";
                         int opMod;
                         cin >> opMod;
 
@@ -170,22 +170,22 @@ int main() {
                                     int fall = nodoMod->fallecimiento;
                                     raiz = eliminar(raiz, nodoMod->nombre);
                                     raiz = insertar(raiz, nuevoNombre, nac, fall);
-                                    cout << "Nombre modificado con éxito ^^\n";
+                                    cout << "Nombre modificado con Ã©xito ^^\n";
                                 }
                                 break;
                             }
                             case 2:
-                                cout << "Nuevo año de nacimiento: ";
+                                cout << "Nuevo aÃ±o de nacimiento: ";
                                 cin >> nodoMod->nacimiento;
                                 cout << "Nacimiento actualizado.\n";
                                 break;
                             case 3:
-                                cout << "Nuevo año de fallecimiento: ";
+                                cout << "Nuevo aÃ±o de fallecimiento: ";
                                 cin >> nodoMod->fallecimiento;
                                 cout << "Fallecimiento actualizado ^^\n";
                                 break;
                             default:
-                                cout << "Opción inválida TnT\n";
+                                cout << "OpciÃ³n invÃ¡lida TnT\n";
                         }
                     } else {
                         cout << "Miembro no encontrado ^u^\n";
@@ -198,11 +198,11 @@ int main() {
                 if (buscar(raiz, nombre)) {
                     cout << nombre << " fue encontrado ^u^\n";
                 } else {
-                    cout << nombre << " no se encuentra en el árbol TnT\n";
+                    cout << nombre << " no se encuentra en el Ã¡rbol TnT\n";
                 }
                 break;
             case 5:
-                cout << "\n--- Árbol Genealógico ---\n";
+                cout << "\n--- Ãrbol GenealÃ³gico ---\n";
                 mostrarJerarquia(raiz);
                 break;
             case 6:
@@ -231,7 +231,7 @@ int main() {
                 cout << "Saliendo del programa ^u^\n";
                 break;
             default:
-                cout << "Opción inválida O.O\n";
+                cout << "OpciÃ³n invÃ¡lida O.O\n";
         }
     } while (opcion != 10);
 
