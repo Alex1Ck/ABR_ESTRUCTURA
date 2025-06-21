@@ -22,7 +22,14 @@ Nodo* insertar(Nodo* raiz, string nombre, int nac, int fall) {
     return raiz;
 }
 
-
+// Buscar un nodo
+Nodo* buscar(Nodo* raiz, string nombre) {
+    if (!raiz || raiz->nombre == nombre) return raiz;
+    if (nombre < raiz->nombre)
+        return buscar(raiz->izquierda, nombre);
+    else
+        return buscar(raiz->derecha, nombre);
+}
 
 // Mínimo (para eliminar)
 Nodo* minimo(Nodo* nodo) {
