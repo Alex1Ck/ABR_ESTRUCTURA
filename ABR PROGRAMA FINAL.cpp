@@ -41,7 +41,6 @@ Nodo* minimo(Nodo* nodo) {
 // Eliminar nodo
 Nodo* eliminar(Nodo* raiz, string nombre) {
     if (!raiz) return NULL;
-
     if (nombre < raiz->nombre)
         raiz->izquierda = eliminar(raiz->izquierda, nombre);
     else if (nombre > raiz->nombre)
