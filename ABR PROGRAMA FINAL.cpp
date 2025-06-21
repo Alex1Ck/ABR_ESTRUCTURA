@@ -31,7 +31,7 @@ Nodo* buscar(Nodo* raiz, string nombre) {
         return buscar(raiz->derecha, nombre);
 }
 
-// Mínimo (para eliminar)
+// MÃ­nimo (para eliminar)
 Nodo* minimo(Nodo* nodo) {
     while (nodo && nodo->izquierda)
         nodo = nodo->izquierda;
@@ -65,7 +65,7 @@ Nodo* eliminar(Nodo* raiz, string nombre) {
     return raiz;
 }
 
-// Mostrar árbol como jerarquía (sin setw)
+// Mostrar Ã¡rbol como jerarquÃ­a (sin setw)
 void mostrarJerarquia(Nodo* nodo, int nivel = 0) {
     if (!nodo) return;
 
@@ -110,7 +110,7 @@ bool mostrarAncestros(Nodo* raiz, string nombre) {
     return false;
 }
 
-// Menú principal
+// MenÃº principal
 int main() {
 	setlocale(LC_CTYPE, "Spanish");
     Nodo* raiz = NULL;
@@ -123,7 +123,7 @@ int main() {
         cout << "1. Insertar miembro\n";
         cout << "2. Eliminar miembro\n";
         cout << "3. Buscar miembro\n";
-        cout << "4. Mostrar jerarquía\n";
+        cout << "4. Mostrar jerarquÃ­a\n";
         cout << "5. Mostrar Inorden\n";
         cout << "6. Mostrar Preorden\n";
         cout << "7. Mostrar Postorden\n";
@@ -136,9 +136,9 @@ int main() {
             case 1:
                 cout << "\nNombre: ";
                 cin >> nombre;
-                cout << "Año de nacimiento: ";
+                cout << "AÃ±o de nacimiento: ";
                 cin >> nac;
-                cout << "Año de fallecimiento: ";
+                cout << "AÃ±o de fallecimiento: ";
                 cin >> fall;
                 raiz = insertar(raiz, nombre, nac, fall);
                 break;
@@ -153,11 +153,11 @@ int main() {
                 if (buscar(raiz, nombre)) {
                     cout << nombre << " fue encontrado.\n";
                 } else {
-                    cout << nombre << " no se encuentra en el árbol.\n";
+                    cout << nombre << " no se encuentra en el Ã¡rbol.\n";
                 }
                 break;
             case 4:
-                cout << "\n--- Árbol Genealógico (Jerárquico) ---\n";
+                cout << "\n--- Ãrbol GenealÃ³gico (JerÃ¡rquico) ---\n";
                 mostrarJerarquia(raiz);
                 break;
             case 5:
@@ -186,7 +186,7 @@ int main() {
                 cout << "Saliendo del programa.\n";
                 break;
             default:
-                cout << "Opción inválida.\n";
+                cout << "OpciÃ³n invÃ¡lida.\n";
         }
     } while (opcion != 9);
 
